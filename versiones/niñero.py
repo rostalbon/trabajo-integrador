@@ -1,0 +1,2 @@
+class Niñero:
+    pass
