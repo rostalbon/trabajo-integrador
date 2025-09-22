@@ -18,4 +18,8 @@ class robotLimpieza(Robot):
             return f"{self._nombre} está aspirando"
         else:
             return f"{self._nombre} no tiene la aspiradora disponible"
-        
+    def trapea(self):
+        if self._trapeadora:
+            return f"{self._nombre} está trapeando"
+        else:
+            return f"{self._nombre} no tiene el trapeador disponible en este momento"    
