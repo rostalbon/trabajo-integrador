@@ -1,5 +1,5 @@
 class Robot:
-    def __init__(self, nombre, color, microfono=0, parlante=0, onOff=0):
+    def __init__(self, nombre, color, microfono=True, parlante=True, onOff=False):
         self._color = color
         self._microfono = microfono
         self._parlante = parlante
