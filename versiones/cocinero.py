@@ -13,3 +13,11 @@ class Cocinero(Robot):
         else:
             self._batidora = True
             return "Se activó la batidora"
+    def revolver(self):
+        if self._cuchara == True:
+            self._cuchara = False
+            return "Se desactivó la cuchara"
+        else:
+            self._cuchara = True
+            return "Se activó la cuchara"
+        
