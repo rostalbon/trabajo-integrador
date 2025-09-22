@@ -20,4 +20,10 @@ class Cocinero(Robot):
         else:
             self._cuchara = True
             return "Se activó la cuchara"
-        
+    def cortar(self):
+        if self._cuchillo == True:
+            self._cuchillo = False
+            return "Se desactivó el cuchillo"
+        else:
+            self._cuchillo = True
+            return "Se activó el cuchillo"
