@@ -7,3 +7,10 @@ class robotLimpieza(Robot):
         self._aspiradora = aspiradora
         self._trapeadora = trapeadora
     
+    def barrer(self):
+        if self._escoba:
+            return f"{self._nombre} no cuenta con la escoba disponible"
+        else:
+            return f"{self._nombre} está barriendo"
+        
+    
