@@ -9,8 +9,13 @@ class robotLimpieza(Robot):
     
     def barrer(self):
         if self._escoba:
-            return f"{self._nombre} no cuenta con la escoba disponible"
-        else:
             return f"{self._nombre} está barriendo"
+        else:
+            return f"{self._nombre} no cuenta con la escoba disponible"
         
-    
+    def aspirar(self):
+        if self._aspiradora:
+            return f"{self._nombre} está aspirando"
+        else:
+            return f"{self._nombre} no tiene la aspiradora disponible"
+        
