@@ -49,5 +49,8 @@ class robotLimpieza(Robot):
         if self._trapeadora == False:
             self._aspiradora=True
             return f"{self._nombre} dejó de trapear"
+        elif self._trapeadora and self._escoba and self._aspiradora:
+            self._trapeadora = False
+            return f"{self._nombre} está trapeando"   
         else:
-            return f"{self._nombre} está trapeando"    
+            return "El robot está ocupado"
