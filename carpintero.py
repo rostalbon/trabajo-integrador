@@ -22,7 +22,7 @@ class Carpintero(Robot):
         else:
             self._sierra = True
             return f"{self._nombre} está cerruchando madera"
-
+        
     def atornillar(self):
         if self._destornillador:
             self._destornillador = False
