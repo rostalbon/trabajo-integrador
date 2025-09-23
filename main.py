@@ -17,6 +17,22 @@ while True:
     print("  3. Limpieza")
     print("  4. Niñero")
     tipo = input("Elija el número que desea: ")
+    if tipo == "1":
+        robot = 0 #CARPINTERO
+        print("Robot de tipo CARPINTERO")
+        break
     if tipo == "2":
         robot = Cocinero(nombre, color)
-        print(robot.batir())
+        print("Robot de tipo COCINERO")
+        break
+    if tipo == "3":
+        robot = 0 #LIMPIEZA
+        print("Robot de tipo LIMPIEZA")
+        break
+    if tipo == "4":
+        robot = 0 #NIÑERO
+        print("Robot de tipo NIÑERO")
+        break
+    else:
+        print("INGRESE UN DATO VÁLIDO")
+        input("Presione enter")
