@@ -1,8 +1,8 @@
 from robot import Robot
 
 class robotLimpieza(Robot):
-    def __init__(self, nombre, color, microfono=True, parlante=True, onOff=False, escoba=True, aspiradora=True, trapeadora=True):
-        super().__init__(nombre, color, microfono, parlante, onOff)
+    def __init__(self, nombre, color, onOff=False, escoba=True, aspiradora=True, trapeadora=True):
+        super().__init__(nombre, color, onOff)
         self._escoba = escoba
         self._aspiradora = aspiradora
         self._trapeadora = trapeadora
