@@ -12,6 +12,12 @@ class robotLimpieza(Robot):
             return "La escoba esta guardada"
         else:
             return "El robot está barriendo"
+        
+    def get_aspiradora(self):
+        if self._aspiradora:
+            return "La aspiradora está apagada"
+        else:
+            return "El robot está aspirando"    
     
     def barrer(self):
         if self._escoba == False:
