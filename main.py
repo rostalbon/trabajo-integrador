@@ -1,5 +1,5 @@
 from cocinero import Cocinero
-from carpintero import Carpintero
+#from carpintero import Carpintero
 
 titulo_programa = "ROBOT"
 print(f"╔═{"═" * len(titulo_programa)}═╗")
@@ -59,7 +59,7 @@ while True:
     print("  4. Niñero")
     tipo = input("Elija el número: ")
     if tipo == "1":
-        robot = Carpintero(nombre, color)
+        robot = 0 #Carpintero(nombre, color)
         print("Robot de tipo CARPINTERO")
         break
     if tipo == "2":
