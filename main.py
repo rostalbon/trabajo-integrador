@@ -1,3 +1,5 @@
+from cocinero import Cocinero
+
 titulo_programa = "ROBOT"
 print(f"╔═{"═" * len(titulo_programa)}═╗")
 print(f"║ {" " * len(titulo_programa)} ║")
@@ -15,3 +17,6 @@ while True:
     print("  3. Limpieza")
     print("  4. Niñero")
     tipo = input("Elija el número que desea: ")
+    if tipo == "2":
+        robot = Cocinero(nombre, color)
+        print(robot.batir())
