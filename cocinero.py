@@ -9,21 +9,21 @@ class Cocinero(Robot):
     def batir(self):
         if self._batidora == False:
             self._batidora = True
-            return "Se desactivó la batidora"
+            return f"{self._nombre} dejó de batir"
         else:
             self._batidora = False
-            return "Se activó la batidora"
+            return f"{self._nombre} está batiendo"
     def revolver(self):
         if self._cuchara == False:
             self._cuchara = True
-            return "Se desactivó la cuchara"
+            return f"{self._nombre} dejó de revolver"
         else:
             self._cuchara = False
-            return "Se activó la cuchara"
+            return f"{self._nombre} está revolviendo"
     def cortar(self):
         if self._cuchillo == False:
             self._cuchillo = True
-            return "Se desactivó el cuchillo"
+            return f"{self._nombre} dejó de cortar"
         else:
             self._cuchillo = False
-            return "Se activó el cuchillo"
+            return f"{self._nombre} está cortando"
