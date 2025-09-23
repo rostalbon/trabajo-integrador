@@ -10,17 +10,20 @@ class robotLimpieza(Robot):
     def barrer(self):
         if self._escoba == False:
             self._escoba = True
-            return f"{self._nombre} dejo de barrer"
+            return f"{self._nombre} dejó de barrer"
         else:
             return f"{self._nombre} está barriendo"
         
     def aspirar(self):
-        if self._aspiradora:
+        if self._aspiradora == False:
+            self._aspiradora = True
+            return f"{self._nombre} dejó de aspirar"
+        else:
             return f"{self._nombre} está aspirando"
-        else:
-            return f"{self._nombre} no tiene la aspiradora disponible"
+        
     def trapea(self):
-        if self._trapeadora:
-            return f"{self._nombre} está trapeando"
+        if self._trapeadora == False:
+            self._aspiradora=True
+            return f"{self._nombre} dejó de trapear"
         else:
-            return f"{self._nombre} no tiene el trapeador disponible en este momento"    
+            return f"{self._nombre} está trapeando"    
