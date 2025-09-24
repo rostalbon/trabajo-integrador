@@ -7,7 +7,7 @@ class robotLimpieza(Robot):
         self._aspiradora = aspiradora
         self._trapeadora = trapeadora
 
-    def get_esoba(self):
+    def get_escoba(self):
         if self._escoba:
             return "La escoba esta guardada"
         else:
