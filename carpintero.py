@@ -1,8 +1,8 @@
 from robot import Robot
 
 class Carpintero(Robot):
-    def __init__(self, nombre, color, microfono=True, parlante=True, onOff=False, hacha=False, sierra=False, destornillador=False):
-        super().__init__(nombre, color, microfono, parlante, onOff)
+    def __init__(self, nombre, color, onOff=False, hacha=False, sierra=False, destornillador=False):
+        super().__init__(nombre, color, onOff)
         self._hacha = hacha
         self._sierra = sierra
         self._destornillador = destornillador
@@ -22,7 +22,7 @@ class Carpintero(Robot):
         else:
             self._sierra = True
             return f"{self._nombre} está cerruchando madera"
-
+        
     def atornillar(self):
         if self._destornillador:
             self._destornillador = False
@@ -38,3 +38,14 @@ class Carpintero(Robot):
         else:
             self._destornillador = True
             return f"{self._nombre} está desatornillando"
+        
+
+    def get_herramientas(self):
+        if self._hacha == True and self._sierra == True and self._destornillador == True:
+            return "El robot no está trabajando"
+        if self._hacha == False:
+            return "El robot está hachando madera"
+        if self._sierra == False:
+            return "El robot está cerruchando madera"
+        if self._destornillador == False:
+            return "El robot está usando el destornillador"
