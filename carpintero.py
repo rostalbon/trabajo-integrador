@@ -38,3 +38,14 @@ class Carpintero(Robot):
         else:
             self._destornillador = True
             return f"{self._nombre} está desatornillando"
+        
+
+    def get_herramientas(self):
+        if self._hacha == True and self._sierra == True and self._destornillador == True:
+            return "El robot no está trabajando"
+        if self._hacha == False:
+            return "El robot está hachando madera"
+        if self._sierra == False:
+            return "El robot está cerruchando madera"
+        if self._destornillador == False:
+            return "El robot está usando el destornillador"
