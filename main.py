@@ -128,7 +128,9 @@ while True:
                 print("3. Revolver / Dejar de revolver")
                 print("4. Cortar / Dejar de cortar")
                 resTrabajo = input("Elija un número: ")
-                if resTrabajo == "2":
+                if resTrabajo == "1":
+                    break
+                elif resTrabajo == "2":
                     print(robot.batir())
                 elif resTrabajo == "3":
                     print(robot.revolver())
@@ -141,7 +143,9 @@ while True:
                 print("3. Aspirar / Dejar de aspirar")
                 print("4. Trapear / Dejar de trapear")
                 resTrabajo = input("Elija un número: ")
-                if resTrabajo == "2":
+                if resTrabajo == "1":
+                    break
+                elif resTrabajo == "2":
                     print(robot.barrer())
                 elif resTrabajo == "3":
                     print(robot.aspirar())
@@ -155,10 +159,12 @@ while True:
                 print("4. Arropar / Dejar de arropar")
                 resTrabajo = input("Elija un número: ")
                 if resTrabajo == "1":
-                    print(robot.limpiar())
+                    break
                 elif resTrabajo == "2":
-                    print(robot.darMamadera())
+                    print(robot.limpiar())
                 elif resTrabajo == "3":
+                    print(robot.darMamadera())
+                elif resTrabajo == "4":
                     print(robot.arropar())
                 else:
                     print("Ingrese un dato válido")
