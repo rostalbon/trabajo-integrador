@@ -92,4 +92,6 @@ while True:
     res = input("Elija un número: ")
     if res == "1":
         if tipo == "1":
-            print()
+            print(f"Nombre: {robot.get_nombre()}")
+            print(f"Color: {robot.get_color()}")
+            print(f"Tipo: CARPINTERO")
