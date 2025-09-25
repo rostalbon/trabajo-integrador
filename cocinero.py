@@ -23,7 +23,7 @@ class Cocinero(Robot):
             self._batidora = False
             return f"{self._nombre} está batiendo"
         else:
-            f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para batir"
+            return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para batir"
     def revolver(self):
         if self._cuchara == False:
             self._cuchara = True
