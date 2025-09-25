@@ -27,6 +27,7 @@ class Robot:
         return f"Se añadió {accesorio} a la lista de accesorios"
     
     def eliminar_accesorio(self, num):
+        num = int(num) - 1
         res = self._accesorios[num]
         self._accesorios.remove(num)
         return f"{res} se eliminó correctamente de la lista de accesorios"
