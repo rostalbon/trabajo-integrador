@@ -10,6 +10,9 @@ class Robot:
         self._accesorios = accesorios
         self._bateria = Bateria(bateria)
 
+    def get_accesorios_array(self):
+        return self._accesorios
+
     def get_accesorios(self):
         if self._accesorios == []:
             return f"{self._nombre} no está usando accesorios"
