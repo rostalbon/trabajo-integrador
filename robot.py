@@ -2,13 +2,13 @@ from bateria import Bateria
 from accesorios import Accesorios
 
 class Robot:
-    def __init__(self, nombre, color, accesorios=[], bateria=100, microfono=True, parlante=True):
+    def __init__(self, nombre, color, accesorios=[], microfono=True, parlante=True):
         self._color = color
         self._microfono = microfono
         self._parlante = parlante
         self._nombre = nombre
         self._accesorios = accesorios
-        self._bateria = Bateria(bateria)
+        self._porcentaje = Bateria()
 
     def get_accesorios_array(self):
         return self._accesorios
@@ -35,11 +35,11 @@ class Robot:
         return f"{res} se eliminó correctamente de la lista de accesorios"
 
     def get_bateria(self):
-        return self._bateria
+        return self._porcentaje
 
     def set_bateria(self, bateria):
-        self._bateria = Bateria(bateria)
-        return f"Se actualizó el porcentaje de batería a {self._bateria}%"
+        self._porcentaje = Bateria(bateria)
+        return f"Se actualizó el porcentaje de batería a {self._porcentaje}%"
 
     def get_nombre(self):
         return self._nombre
