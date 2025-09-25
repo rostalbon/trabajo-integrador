@@ -105,56 +105,60 @@ while True:
         print(robot.get_trabajo())
         input("Presione enter para salir al menú")
     elif res == "3":
-        print(f"Estado actual: {robot.get_trabajo()}")
-        if tipo == "1":
-            print("1. Hachar / Dejar de hachar")
-            print("2. Cerruchar / Dejar de cerruchar")
-            print("3. Atornillar / Dejar de atornillar")
-            resTrabajo = input("Elija un número: ")
-            if resTrabajo == "1":
-                print(robot.hachar())
-            elif resTrabajo == "2":
-                print(robot.cerruchar())
-            elif resTrabajo == "3":
-                print(robot.atornillar())
+        while True:
+            print(f"Estado actual: {robot.get_trabajo()}")
+            print("1. Salir al menú principal")
+            if tipo == "1":
+                print("2. Hachar / Dejar de hachar")
+                print("3. Cerruchar / Dejar de cerruchar")
+                print("4. Atornillar / Dejar de atornillar")
+                resTrabajo = input("Elija un número: ")
+                if resTrabajo == "1":
+                    break
+                elif resTrabajo == "2":
+                    print(robot.hachar())
+                elif resTrabajo == "3":
+                    print(robot.cerruchar())
+                elif resTrabajo == "4":
+                    print(robot.atornillar())
+                else:
+                    print("Ingrese un dato válido")
+            elif tipo == "2":
+                print("2. Batir / Dejar de batir")
+                print("3. Revolver / Dejar de revolver")
+                print("4. Cortar / Dejar de cortar")
+                resTrabajo = input("Elija un número: ")
+                if resTrabajo == "2":
+                    print(robot.batir())
+                elif resTrabajo == "3":
+                    print(robot.revolver())
+                elif resTrabajo == "4":
+                    print(robot.cortar())
+                else:
+                    print("Ingrese un dato válido")
+            elif tipo == "3":
+                print("2. Barrer / Dejar de barrer")
+                print("3. Aspirar / Dejar de aspirar")
+                print("4. Trapear / Dejar de trapear")
+                resTrabajo = input("Elija un número: ")
+                if resTrabajo == "2":
+                    print(robot.barrer())
+                elif resTrabajo == "3":
+                    print(robot.aspirar())
+                elif resTrabajo == "4":
+                    print(robot.trapear())
+                else:
+                    print("Ingrese un dato válido")
             else:
-                print("Ingrese un dato válido")
-        elif tipo == "2":
-            print("1. Batir / Dejar de batir")
-            print("2. Revolver / Dejar de revolver")
-            print("3. Cortar / Dejar de cortar")
-            resTrabajo = input("Elija un número: ")
-            if resTrabajo == "1":
-                print(robot.batir())
-            elif resTrabajo == "2":
-                print(robot.revolver())
-            elif resTrabajo == "3":
-                print(robot.cortar())
-            else:
-                print("Ingrese un dato válido")
-        elif tipo == "3":
-            print("1. Barrer / Dejar de barrer")
-            print("2. Aspirar / Dejar de aspirar")
-            print("3. Trapear / Dejar de trapear")
-            resTrabajo = input("Elija un número: ")
-            if resTrabajo == "1":
-                print(robot.barrer())
-            elif resTrabajo == "2":
-                print(robot.aspirar())
-            elif resTrabajo == "3":
-                print(robot.trapear())
-            else:
-                print("Ingrese un dato válido")
-        else:
-            print("1. Limpiar / Dejar de limpiar")
-            print("2. Dar mamadera / Dejar de dar mamadera")
-            print("3. Arropar / Dejar de arropar")
-            resTrabajo = input("Elija un número: ")
-            if resTrabajo == "1":
-                print(robot.limpiar())
-            elif resTrabajo == "2":
-                print(robot.darMamadera())
-            elif resTrabajo == "3":
-                print(robot.arropar())
-            else:
-                print("Ingrese un dato válido")
+                print("2. Limpiar / Dejar de limpiar")
+                print("3. Dar mamadera / Dejar de dar mamadera")
+                print("4. Arropar / Dejar de arropar")
+                resTrabajo = input("Elija un número: ")
+                if resTrabajo == "1":
+                    print(robot.limpiar())
+                elif resTrabajo == "2":
+                    print(robot.darMamadera())
+                elif resTrabajo == "3":
+                    print(robot.arropar())
+                else:
+                    print("Ingrese un dato válido")

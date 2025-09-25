@@ -7,7 +7,7 @@ class Carpintero(Robot):
         self._sierra = sierra
         self._destornillador = destornillador
 
-    def get_trabajos(self):
+    def get_trabajo(self):
         if self._hacha and self._sierra and self._destornillador:
             return f"{self._nombre} no está trabajando"
         elif self._hacha == False:
