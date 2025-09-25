@@ -135,4 +135,26 @@ while True:
         elif tipo == "3":
             print("1. Barrer / Dejar de barrer")
             print("2. Aspirar / Dejar de aspirar")
-            print("3. ")
+            print("3. Trapear / Dejar de trapear")
+            resTrabajo = input("Elija un número: ")
+            if resTrabajo == "1":
+                print(robot.barrer())
+            elif resTrabajo == "2":
+                print(robot.aspirar())
+            elif resTrabajo == "3":
+                print(robot.trapear())
+            else:
+                print("Ingrese un dato válido")
+        else:
+            print("1. Limpiar / Dejar de limpiar")
+            print("2. Dar mamadera / Dejar de dar mamadera")
+            print("3. Arropar / Dejar de arropar")
+            resTrabajo = input("Elija un número: ")
+            if resTrabajo == "1":
+                print(robot.limpiar())
+            elif resTrabajo == "2":
+                print(robot.darMamadera())
+            elif resTrabajo == "3":
+                print(robot.arropar())
+            else:
+                print("Ingrese un dato válido")
