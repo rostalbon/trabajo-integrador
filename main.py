@@ -89,12 +89,14 @@ while True:
     print("2. ¿Qué tarea está realizando ahora?")
     print("3. Elegir una tarea para que realice")
     print("4. Configuración de la batería")
-    print("5. Salir")
+    print("5. Modificar accesorios")
+    print("6. Salir")
     res = input("Elija un número: ")
     if res == "1":
         print(f"Nombre: {robot.get_nombre()}")
         print(f"Color: {robot.get_color()}")
         print(f"Batería: {robot.get_bateria()}")
+        print(f"Accesorios: {robot.get_accesorios()}")
         if tipo == "1":
             print("Tipo: CARPINTERO")
         elif tipo == "2":
@@ -174,6 +176,23 @@ while True:
         bateria = input("Ingrese el porcentaje de batería (solo número): ")
         print(robot.set_bateria(bateria))
     elif res == "5":
+        print("1. Añadir accesorio")
+        print("2. Eliminar accesorio")
+        print("3. Salir")
+        resAccesorio = input("Elija un número: ")
+        if resAccesorio == "1":
+            accesorio = input("Ingrese el nombre del accesorio: ")
+            print(robot.agregar_accesorio(accesorio))
+        elif resAccesorio == "2":
+            accesorios = robot.get_accesorios_array()
+            if accesorios == []:
+                print("Sin accesorios")
+            else:
+                for i in range (1, accesorios.length(), 1):
+                    print(f"{i}. {accesorios[i-1]}")
+            resEliminar = int(input("Elija el número que desea eliminar: "))
+            print(robot.eliminar_accesorio(resEliminar-1))
+    elif res == "6":
         break
     else:
         print("Ingrese un dato válido")
