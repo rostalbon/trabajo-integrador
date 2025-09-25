@@ -88,11 +88,13 @@ while True:
     print("1. Ver características")
     print("2. ¿Qué tarea está realizando ahora?")
     print("3. Elegir una tarea para que realice")
-    print("4. Salir")
+    print("4. Configuración de la batería")
+    print("5. Salir")
     res = input("Elija un número: ")
     if res == "1":
         print(f"Nombre: {robot.get_nombre()}")
         print(f"Color: {robot.get_color()}")
+        print(f"Batería: {robot.get_bateria()}")
         if tipo == "1":
             print("Tipo: CARPINTERO")
         elif tipo == "2":
@@ -169,6 +171,9 @@ while True:
                 else:
                     print("Ingrese un dato válido")
     elif res == "4":
+        bateria = input("Ingrese el porcentaje de batería (solo número): ")
+        print(robot.set_bateria(bateria))
+    elif res == "5":
         break
     else:
         print("Ingrese un dato válido")
