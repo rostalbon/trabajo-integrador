@@ -104,3 +104,35 @@ while True:
     elif res == "2":
         print(robot.get_trabajo())
         input("Presione enter para salir al menú")
+    elif res == "3":
+        print(f"Estado actual: {robot.get_trabajo()}")
+        if tipo == "1":
+            print("1. Hachar / Dejar de hachar")
+            print("2. Cerruchar / Dejar de cerruchar")
+            print("3. Atornillar / Dejar de atornillar")
+            resTrabajo = input("Elija un número: ")
+            if resTrabajo == "1":
+                print(robot.hachar())
+            elif resTrabajo == "2":
+                print(robot.cerruchar())
+            elif resTrabajo == "3":
+                print(robot.atornillar())
+            else:
+                print("Ingrese un dato válido")
+        elif tipo == "2":
+            print("1. Batir / Dejar de batir")
+            print("2. Revolver / Dejar de revolver")
+            print("3. Cortar / Dejar de cortar")
+            resTrabajo = input("Elija un número: ")
+            if resTrabajo == "1":
+                print(robot.batir())
+            elif resTrabajo == "2":
+                print(robot.revolver())
+            elif resTrabajo == "3":
+                print(robot.cortar())
+            else:
+                print("Ingrese un dato válido")
+        elif tipo == "3":
+            print("1. Barrer / Dejar de barrer")
+            print("2. Aspirar / Dejar de aspirar")
+            print("3. ")

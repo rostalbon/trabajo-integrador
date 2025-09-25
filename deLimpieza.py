@@ -37,7 +37,7 @@ class RobotLimpieza(Robot):
         else:
             return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para aspirar"
         
-    def trapea(self):
+    def trapear(self):
         if self._trapeadora == False:
             self._aspiradora=True
             return f"{self._nombre} dejó de trapear"
