@@ -7,19 +7,19 @@ class Cocinero(Robot):
         self._cuchillo = cuchillo
         self._cuchara = cuchara
     def get_trabajo(self):
-        if self._batidora == True and self._cuchillo == True and self._cuchara == True:
-            return "El robot no está trabajando"
+        if self._batidora and self._cuchillo and self._cuchara:
+            return f"{self._nombre} no está trabajando"
         elif self._batidora == False:
-            return "El robot está batiendo"
+            return f"{self._nombre} está batiendo"
         elif self._cuchillo == False:
-            return "El robot está cortando"
+            return f"{self._nombre} está cortando"
         else:
-            return "El robot está revolviendo"
+            return f"{self._nombre} está revolviendo"
     def batir(self):
         if self._batidora == False:
             self._batidora = True
             return f"{self._nombre} dejó de batir"
-        elif self._batidora == True and self._cuchillo == True and self._cuchara == True:
+        elif self._batidora and self._cuchillo and self._cuchara:
             self._batidora = False
             return f"{self._nombre} está batiendo"
         else:
@@ -28,7 +28,7 @@ class Cocinero(Robot):
         if self._cuchara == False:
             self._cuchara = True
             return f"{self._nombre} dejó de revolver"
-        elif self._cuchara == True and self._cuchillo == True and self._batidora == True:
+        elif self._cuchara and self._cuchillo and self._batidora:
             self._cuchara = False
             return f"{self._nombre} está revolviendo"
         else:
@@ -37,7 +37,7 @@ class Cocinero(Robot):
         if self._cuchillo == False:
             self._cuchillo = True
             return f"{self._nombre} dejó de cortar"
-        elif self._cuchillo == True and self._batidora == True and self._cuchara == True:
+        elif self._cuchillo and self._batidora and self._cuchara:
             self.cuchillo = False
             return f"{self._nombre} está cortando"
         else:
