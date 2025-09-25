@@ -35,8 +35,12 @@ class Niñero(Robot):
             self._mamadera = True
             return f"{self._nombre} ya no está dando la mamadera"
         else:
-            print("¡El robot no encuentra la mamadera! Va a buscarla.")
-            self._mamadera=True
+            return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para dar la mamadera"
     
     def arropar(self):
-        print("El robot arropó al niño.")
+        if self._mamadera == True and self._arropar == True and self._articulosLimpieza == True:
+            self._arropar = False
+            return f"{self._nombre} está arropando"
+        elif self._arropar == False:
+            self._arropar = True
+            return f"{self._nombre} ya no está arropando"
