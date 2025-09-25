@@ -1,3 +1,3 @@
-class controlRemoto:
-    def __init__(self, bateria=100):
-        self._bateria = bateria
+class Accesorios:
+    def __init__(self, accesorio):
+        self._accesorio = accesorio
