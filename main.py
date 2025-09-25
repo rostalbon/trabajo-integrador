@@ -101,3 +101,6 @@ while True:
             print("Tipo: LIMPIEZA")
         else:
             print("Tipo: NIÑERO")
+    elif res == "2":
+        print(robot.get_trabajo())
+        input("Presione enter para salir al menú")
