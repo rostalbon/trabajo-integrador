@@ -1,5 +1,7 @@
 from cocinero import Cocinero
-#from carpintero import Carpintero
+from carpintero import Carpintero
+from niñero import Niñero
+from deLimpieza import RobotLimpieza
 
 titulo_programa = "ROBOT"
 print(f"╔═{"═" * len(titulo_programa)}═╗")
