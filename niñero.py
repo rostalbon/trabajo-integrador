@@ -5,6 +5,12 @@ class niñero(Robot):
         super().__init__(nombre, color, microfono, parlante, onOff)
         self._mamadera = mamadera
         self._articulosLimpieza = articulosLimpieza
+
+    def get_mamadera(self):
+        return self._mamadera
+    
+    def get_articulosLimpieza(self):
+        return self._articulosLimpieza
     
     def limpiar(self):
         if self._articulosLimpieza==True:
