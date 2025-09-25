@@ -6,6 +6,12 @@ class Robot:
         self._nombre = nombre
         self._onOff = onOff
 
+    def get_nombre(self):
+        return self._nombre
+    
+    def get_color(self):
+        return self._color
+
     def encender(self):
         self._onOff = 1
         return f"{self._nombre} está encendido"
