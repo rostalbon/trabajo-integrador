@@ -168,3 +168,7 @@ while True:
                     print(robot.arropar())
                 else:
                     print("Ingrese un dato válido")
+    elif res == "4":
+        break
+    else:
+        print("Ingrese un dato válido")
