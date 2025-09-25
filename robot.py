@@ -1,12 +1,35 @@
 from bateria import Bateria
+from accesorios import Accesorios
 
 class Robot:
-    def __init__(self, nombre, color, bateria=100, microfono=True, parlante=True):
+    def __init__(self, nombre, color, accesorios=[], bateria=100, microfono=True, parlante=True):
         self._color = color
         self._microfono = microfono
         self._parlante = parlante
         self._nombre = nombre
+        self._accesorios = accesorios
         self._bateria = Bateria(bateria)
+
+    def get_accesorios(self):
+        if self._accesorios == []:
+            return f"{self._nombre} no está usando accesorios"
+        else:
+            res = ""
+            for accesorio in self._accesorios:
+                if res == "":
+                    res = accesorio
+                else:
+                    res = res + f", {accesorio}"
+            return res
+    
+    def agregar_accesorio(self, accesorio):
+        self._accesorios.append(accesorio)
+        return f"Se añadió {accesorio} a la lista de accesorios"
+    
+    def eliminar_accesorio(self, num):
+        res = self._accesorios[num]
+        self._accesorios.remove(num)
+        return f"{res} se eliminó correctamente de la lista de accesorios"
 
     def get_bateria(self):
         return self._bateria
