@@ -182,7 +182,7 @@ while True:
         resAccesorio = input("Elija un número: ")
         if resAccesorio == "1":
             accesorio = input("Ingrese el nombre del accesorio: ")
-            print(robot.agregar_accesorio())
+            print(robot.agregar_accesorio(accesorio))
         elif resAccesorio == "2":
             accesorios = robot.get_accesorios_array()
             if accesorios == []:
