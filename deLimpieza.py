@@ -1,29 +1,21 @@
 from robot import Robot
 
-class robotLimpieza(Robot):
-    def __init__(self, nombre, color, onOff=False, escoba=True, aspiradora=True, trapeadora=True):
-        super().__init__(nombre, color, onOff)
+class RobotLimpieza(Robot):
+    def __init__(self, nombre, color, escoba=True, aspiradora=True, trapeadora=True):
+        super().__init__(nombre, color)
         self._escoba = escoba
         self._aspiradora = aspiradora
         self._trapeadora = trapeadora
 
-    def get_escoba(self):
-        if self._escoba:
-            return "La escoba esta guardada"
+    def get_trabajo(self):
+        if self._escoba == True and self._aspiradora == True and self._trapeadora == True:
+            return f"{self._nombre} no está trabajando"
+        elif self._escoba == False:
+            return f"{self._nombre} está barriendo"
+        elif self._aspiradora == False:
+            return f"{self._nombre} está aspirando"
         else:
-            return "El robot está barriendo"
-        
-    def get_aspiradora(self):
-        if self._aspiradora:
-            return "La aspiradora está apagada"
-        else:
-            return "El robot está aspirando" 
-
-    def get_trapeadora(self):
-        if self._trapeadora:
-            return "El trapeador está guardado"
-        else:
-            return "El robot está trapeando"   
+            return f"{self._nombre} está trapeando"   
     
     def barrer(self):
         if self._escoba == False:
@@ -33,7 +25,7 @@ class robotLimpieza(Robot):
             self._escoba = False
             return f"{self._nombre} está barriendo"
         else:
-            return "El robot está ocupado con otra tarea"
+            return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para barrer"
         
     def aspirar(self):
         if self._aspiradora == False:
@@ -43,9 +35,9 @@ class robotLimpieza(Robot):
             self._aspiradora = False
             return f"{self._nombre} está aspirando"
         else:
-            return "El robot está ocupado"
+            return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para aspirar"
         
-    def trapea(self):
+    def trapear(self):
         if self._trapeadora == False:
             self._aspiradora=True
             return f"{self._nombre} dejó de trapear"
@@ -53,4 +45,4 @@ class robotLimpieza(Robot):
             self._trapeadora = False
             return f"{self._nombre} está trapeando"   
         else:
-            return "El robot está ocupado"
+            return f"{self._nombre} está haciendo otro trabajo, deja de hacerlo para trapear"
