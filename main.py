@@ -11,7 +11,7 @@ print(f"║ {" " * len(titulo_programa)} ║")
 print(f"╚═{"═" * len(titulo_programa)}═╝")
 
 print("~ DATOS DEL ROBOT ~")
-nombre = input("Asígnele un nombre a su robot: ").upper
+nombre = input("Asígnele un nombre a su robot: ").upper()
 while True:
     print("¿De qué color quiere a su robot?")
     print("1. Rojo")
@@ -91,7 +91,13 @@ while True:
     print("4. Salir")
     res = input("Elija un número: ")
     if res == "1":
+        print(f"Nombre: {robot.get_nombre()}")
+        print(f"Color: {robot.get_color()}")
         if tipo == "1":
-            print(f"Nombre: {robot.get_nombre()}")
-            print(f"Color: {robot.get_color()}")
-            print(f"Tipo: CARPINTERO")
+            print("Tipo: CARPINTERO")
+        elif tipo == "2":
+            print("Tipo: COCINERO")
+        elif tipo == "3":
+            print("Tipo: LIMPIEZA")
+        else:
+            print("Tipo: NIÑERO")
