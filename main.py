@@ -61,7 +61,7 @@ while True:
     print("  4. Niñero")
     tipo = input("Elija el número: ")
     if tipo == "1":
-        robot = 0 #Carpintero(nombre, color)
+        robot = Carpintero(nombre, color)
         print("Robot de tipo CARPINTERO")
         break
     if tipo == "2":
@@ -69,11 +69,11 @@ while True:
         print("Robot de tipo COCINERO")
         break
     if tipo == "3":
-        robot = 0 #LIMPIEZA
+        robot = RobotLimpieza(nombre, color)
         print("Robot de tipo LIMPIEZA")
         break
     if tipo == "4":
-        robot = 0 #NIÑERO
+        robot = Niñero(nombre, color)
         print("Robot de tipo NIÑERO")
         break
     else:
