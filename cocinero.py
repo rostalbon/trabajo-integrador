@@ -1,8 +1,8 @@
 from robot import Robot
 
 class Cocinero(Robot):
-    def __init__(self, nombre, color, batidora=True, cuchillo=True, cuchara=True, onOff=False):
-        super().__init__(nombre, color, onOff)
+    def __init__(self, nombre, color, batidora=True, cuchillo=True, cuchara=True):
+        super().__init__(nombre, color)
         self._batidora = batidora
         self._cuchillo = cuchillo
         self._cuchara = cuchara

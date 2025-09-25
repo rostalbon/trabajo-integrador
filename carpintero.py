@@ -1,8 +1,8 @@
 from robot import Robot
 
 class Carpintero(Robot):
-    def __init__(self, nombre, color, onOff=False, hacha=True, sierra=True, destornillador=True):
-        super().__init__(nombre, color, onOff)
+    def __init__(self, nombre, color, hacha=True, sierra=True, destornillador=True):
+        super().__init__(nombre, color)
         self._hacha = hacha
         self._sierra = sierra
         self._destornillador = destornillador

@@ -1,8 +1,8 @@
 from robot import Robot
 
 class Niñero(Robot):
-    def __init__(self, nombre, color, mamadera=True, articulosLimpieza=True, arropar=True, microfono=True, parlante=True, onOff=False):
-        super().__init__(nombre, color, microfono, parlante, onOff)
+    def __init__(self, nombre, color, mamadera=True, articulosLimpieza=True, arropar=True):
+        super().__init__(nombre, color)
         self._mamadera = mamadera
         self._articulosLimpieza = articulosLimpieza
         self._arropar = arropar

@@ -1,12 +1,11 @@
 from bateria import Bateria
 
 class Robot:
-    def __init__(self, nombre, color, bateria=100, microfono=True, parlante=True, onOff=False):
+    def __init__(self, nombre, color, bateria=100, microfono=True, parlante=True):
         self._color = color
         self._microfono = microfono
         self._parlante = parlante
         self._nombre = nombre
-        self._onOff = onOff
         self._bateria = Bateria(bateria)
 
     def get_bateria(self):
