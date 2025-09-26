@@ -154,7 +154,7 @@ while True:
         else:
             print("Tipo: NIÑERO")
         print("=====================================================================================")
-        print("Presione Enter para volver al MENÚ PRINCIPAL")
+        input("Presione Enter para volver al MENÚ PRINCIPAL")
     elif res == "2":
         print("=====================================================================================")
         print(robot.get_trabajo())
@@ -245,6 +245,7 @@ while True:
                     print("=====================================================================================")
                     print("Ingrese un dato válido")
                 print("=====================================================================================")
+            input("Presione Enter para volver")
     elif res == "4":
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         bateria = input("Ingrese el porcentaje de batería (solo número): ")
