@@ -2,6 +2,7 @@ from cocinero import Cocinero
 from carpintero import Carpintero
 from niñero import Niñero
 from deLimpieza import RobotLimpieza
+from accesorios import Accesorios
 
 titulo_programa = "ROBOT"
 print(f"╔═{"═" * len(titulo_programa)}═╗")
@@ -182,16 +183,17 @@ while True:
         resAccesorio = input("Elija un número: ")
         if resAccesorio == "1":
             accesorio = input("Ingrese el nombre del accesorio: ")
+            accesorio_agregado = Accesorios(accesorio)
             print(robot.agregar_accesorio(accesorio))
         elif resAccesorio == "2":
             accesorios = robot.get_accesorios_array()
             if accesorios == []:
                 print("Sin accesorios")
             else:
-                for i in range (1, accesorios.length(), 1):
+                for i in range (1, len(accesorios), 1):
                     print(f"{i}. {accesorios[i-1]}")
-            resEliminar = int(input("Elija el número que desea eliminar: "))
-            print(robot.eliminar_accesorio(resEliminar-1))
+                resEliminar = int(input("Elija el número que desea eliminar: "))
+                print(robot.eliminar_accesorio(resEliminar))
     elif res == "6":
         break
     else:
