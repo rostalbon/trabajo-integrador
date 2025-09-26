@@ -190,7 +190,7 @@ while True:
             if accesorios == []:
                 print("Sin accesorios")
             else:
-                for i in range (1, len(accesorios), 1):
+                for i in range (1, len(accesorios)+1, 1):
                     print(f"{i}. {accesorios[i-1]}")
                 resEliminar = int(input("Elija el número que desea eliminar: "))
                 print(robot.eliminar_accesorio(resEliminar))

@@ -29,8 +29,11 @@ class Robot:
     def eliminar_accesorio(self, num):
         num = int(num) - 1
         res = self._accesorios[num]
-        self._accesorios.remove(num)
+        self._accesorios.pop(num)
         return f"{res} se eliminó correctamente de la lista de accesorios"
+    
+    def set_accesorios(self, array):
+        self._accesorios = array
 
     def get_bateria(self):
         return self._porcentaje.get_porcentaje()
